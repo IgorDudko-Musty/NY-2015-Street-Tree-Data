@@ -1,0 +1,11 @@
+path_data_model: 
+ - "../datasets/one_file/xyd_3_classes_balanced"
+ - "../models/xyd_3_balanced"
+mode: "test"
+output_size: 3
+device: "cpu"
+data_num: 39
+data:
+ - 0.3
+ - 0.4
+ - 0.5

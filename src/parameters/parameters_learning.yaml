@@ -1,0 +1,8 @@
+path_data_model: 
+ - "../datasets/one_file/dists_2_classes_balanced"
+ - "../models/dists_2_balanced"
+mode: "train"
+batch_size: 128
+output_size: 2
+device: "cuda"
+EPOCHS: 100
