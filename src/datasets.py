@@ -18,6 +18,8 @@ class Data_Formation(Dataset):
         Сторока, содержащая путь к данным.
     train: bool
         Флаг, указывающий какой надор данных загружать - тренировочный илил тестовый.
+    one_file: bool
+        Флаг, указывающий на то, загружать данные одним файло или нет
     """
     def __init__(self, path_to_data=None, train=True, one_file=False):
         self.data_list = []

@@ -43,7 +43,7 @@ class Model_Implementation():
         self.output_size = output_size
         self.device = device
         if self.mode == 'train':
-            self.path_to_data = path_data_model[0]#r'./datasets/one_file/xyd_{}_classes_balanced'.format(3)
+            self.path_to_data = path_data_model[0]
             self.path_to_model = path_data_model[1]
             train_data = Data_Formation(self.path_to_data, train=True, one_file=True)
             input_size = train_data[0][0].shape[0]
@@ -63,7 +63,7 @@ class Model_Implementation():
             self.val_loss = []
             self.val_acc = []
         else:
-            self.path_to_model = path_data_model[1]#r'./models/xyd_{}_classes_balanced'.format(3)
+            self.path_to_model = path_data_model[1]
             temp_file_list = os.listdir(self.path_to_model)
             for file in temp_file_list:
                 if os.path.splitext(file)[-1] == '.pt':
