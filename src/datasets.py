@@ -14,11 +14,11 @@ class Data_Formation(Dataset):
     
     Параметры:
     ----------
-    path_to_data: str
+    path_to_data: str, optional
         Сторока, содержащая путь к данным.
-    train: bool
+    train: bool, optional
         Флаг, указывающий какой надор данных загружать - тренировочный илил тестовый.
-    one_file: bool
+    one_file: bool, optional
         Флаг, указывающий на то, загружать данные одним файло или нет
     """
     def __init__(self, path_to_data=None, train=True, one_file=False):
