@@ -7,9 +7,13 @@ from nnets import Model_Implementation
 
 app = FastAPI()
 
+@app.get('/')
+def main_page():
+    return "Pass to /doc and enter numbers to predict"
+
 @app.post("/predict") 
 async def predict(data: List[float], paths: List[str], cl_amount: int): 
-    try: 
+    try:
         model = Model_Implementation(path_data_model=paths,
                                      mode='predict', output_size=cl_amount, device='cpu')
         data = torch.tensor(data).unsqueeze(0)
